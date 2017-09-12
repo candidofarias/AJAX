@@ -1,0 +1,6 @@
+<video width="1000" height="880" controls="controls" autoplay="autoplay">
+<source src="Renato.mp4" type="video/mp4">
+<object data="" width="320" height="240">
+<embed width="320" height="240" src="Yes Bank Advertisment.mp4">
+</object>
+</video>

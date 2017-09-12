@@ -1,0 +1,21 @@
+<! DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Curso Web – Aplicações web</title>
+		<script src="script.js"></script>
+	</head>
+	<body onload="inicio()">
+		<nav>
+			<ul>
+				<li><a href='#' onclick="carregarTexto(); return false">Texto</a></li>
+				<li><a href='#' onclick="carregarImagem(); return false">Imagem</a></li>
+				<li><a href='#' onclick="carregarVideo(); return false">Video</a></li>
+			</ul>
+		</nav>
+		<section id="resultado">
+				
+		</section>
+		
+	</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE>
+<!--
+Exemplo de uso de JSON com PHP
+-->
+<html>
+  <head>
+    <title>Ajax fácil com jQuery</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.3.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        //inicio o jquery
+        $('button').click(function() {
+          // inicio da requisição requisição
+          $.ajax({
+            // url para o conteúdo (json.php)
+            url : "json.php",
+            // Define o tipo de dado que será retornado
+            dataType : "json",
+            // função a ser executada quando quando a requisição obter um retorno com sucesso.
+            success : function(retorno){
+
+              // Variável para guardar o conteúdo html
+              var html = "";
+              // executo este laço para ecessar os itens do objeto javaScript
+              for($i=0; $i < retorno.length; $i++){
+                // coloco o nome e sobre nome
+                html += "<strong>Nome:</strong> "+retorno[$i].nome +" "+ retorno[$i].sobreNome;
+                // coloco a cidade
+                html += " <strong>Cidade:</strong> "+retorno[$i].cidade
+                // e por ultimo dou uma quebra de linha
+                html += "<br />";
+              }//fim do laço
+
+              //coloco a variável html na tela
+              $('#resultado').html(html);
+            }
+          });//termina o ajax
+        });//termina o evento
+	    });//termina o jquery
+    </script>
+  </head>
+  <body>
+    <button>Teste JSON - PHP</button>
+      <div id="resultado">&nbsp;</div>
+  </body>
+  
+  
+</html>

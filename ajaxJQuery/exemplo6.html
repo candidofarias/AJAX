@@ -1,0 +1,31 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <title>Ajax fácil com jQuery</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.3.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('button').click(function() {
+            $.ajax({
+                type: 'POST',
+                dataType: 'html',
+                url: 'json.php',
+                async: true,
+                success: function(retorno) {
+					
+					
+                    $('#resultado').html(retorno);
+                }
+             });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <button>Teste</button>
+      <div id="resultado">&nbsp;</div>
+  </body>
+  
+  
+</html>
